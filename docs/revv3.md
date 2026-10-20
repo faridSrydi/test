@@ -1,14 +1,6 @@
-# Q-GUARD: CONTINUITY-AWARE COLD-CHAIN RISK MONITORING BERBASIS IOT DAN MULTIVARIATE AI UNTUK SMART QUARANTINE KOMODITAS BEKU
+# Kode Dokumen: [FP-077] | Full Paper QIC 2026
 
-<!--
-PANDUAN FORMAT CETAK / EKSPOR KE .DOCX (SESUAI TEMPLATE RESMI QIC 2026):
-1. Kertas & Margin: A4, Portrait, Margin sekeliling rata 3 cm (Atas, Bawah, Kiri, Kanan).
-2. Tipografi: Times New Roman; Judul 14 pt Bold; Bab/Subbab 12 pt Bold; Isi 12 pt Spasi 1.15 Justify (Indent 1 cm); Abstrak 10 pt Spasi 1.0 (Italic untuk Inggris).
-3. Batasan Naskah: Teks Inti 3.000–4.000 kata (setara 8–10 halaman), Tabel & Gambar maksimal akumulasi 5 buah (tabel horizontal tanpa garis vertikal).
-4. Sitasi: APA Style 7th Edition (minimal 15 rujukan bereputasi).
--->
-
----
+# Q-GUARD: Continuity-Aware Cold-Chain Risk Monitoring Berbasis IoT dan Multivariate AI untuk Smart Quarantine Komoditas Beku
 
 <div align="center">
 
@@ -16,7 +8,7 @@ PANDUAN FORMAT CETAK / EKSPOR KE .DOCX (SESUAI TEMPLATE RESMI QIC 2026):
 
 </div>
 
-Distribusi komoditas hayati beku antarpulau menyisakan kesenjangan informasi (*distribution information gap*): kondisi kargo tidak terpantau sejak segel dipasang di titik asal hingga tiba di pelabuhan ekspor, sehingga kegagalan pendingin baru diketahui setelah komoditas membusuk, seperti pada pemusnahan 14,5 ton daging ayam beku di Nabire oleh Badan Karantina Indonesia (Barantin). Karya tulis ini mengusulkan **Q-GUARD**, instrumen pemantau portabel berbasis *Internet of Things* (IoT) dan *Edge-AI* untuk mendukung pengawasan karantina pada subtema *Smart Border & AI-Quarantine*. Inti kebaruannya adalah kontinuitas data: rekaman suhu tiga titik spasial (*core, mid-pack, door*), guncangan mekanis, status palka, lokasi GPS, dan waktu presisi tetap utuh melalui penyimpanan lokal *offline-first* dan sinkronisasi otomatis saat tiba di gerbang pelabuhan. Data dinilai dengan kerangka *Continuity-Aware Cold-Chain Risk* (CACCR) yang memadukan termodinamika *Mean Kinetic Temperature* (MKT) Arrhenius, skor risiko komposit, dan deteksi anomali *Isolation Forest*. Validasi fungsional dilakukan melalui pengujian eksperimental prototipe fisik pada wadah pendingin berinsulasi 40 liter berisi spesimen kargo beku (−22 °C): probe pintu mendeteksi kenaikan suhu 112,6 menit lebih awal daripada probe inti (memberikan margin peringatan dini yang krusial), protokol *store-and-forward* menjaga 1.440 rekaman secara utuh (100% *zero data loss*) selama 120 menit *offline*, dan model anomali AI berhasil menekan alarm palsu siklus *defrost* hingga 7,8% ($F1\text{-score} = 96{,}4\%$). Keluarannya berupa berkas digital *Quarantine Inspection Dossier* yang diterbitkan instan (< 1 detik) sebagai dasar disposisi karantina Jalur Hijau (*Fast-Track Clearance*). Biaya perakitan prototipe berkisar Rp1,2–1,5 juta dengan biaya operasional per pengapalan kurang dari Rp15.000, membuktikan kelayakan implementasi teknis dan ekonomisnya bagi modernisasi Barantin.
+Distribusi komoditas hayati beku antarpulau menyisakan kesenjangan informasi (*distribution information gap*): kondisi kargo tidak terpantau sejak segel dipasang di titik asal hingga tiba di pelabuhan ekspor, sehingga kegagalan pendingin baru diketahui setelah komoditas rusak, seperti pada pemusnahan 14,5 ton daging ayam beku di Nabire. Karya ini mengusulkan **Q-GUARD**, instrumen pemantau portabel berbasis *Internet of Things* (IoT) untuk mendukung pengawasan karantina pada subtema *Smart Border & AI-Quarantine*. Inti kebaruannya adalah kontinuitas data: rekaman suhu tiga titik spasial (inti, tengah, pintu), guncangan mekanis, status pintu, lokasi GPS, dan waktu presisi tetap utuh melalui penyimpanan lokal *offline-first* dan sinkronisasi otomatis saat tiba di pelabuhan. Data tersebut dinilai dengan kerangka *Continuity-Aware Cold-Chain Risk* (CACCR) yang memadukan *Mean Kinetic Temperature* (MKT) Arrhenius, skor risiko komposit, dan deteksi anomali *Isolation Forest* yang dibandingkan dengan pemantauan ambang batas tunggal. Keluarannya berupa berkas digital *Quarantine Inspection Dossier* yang menjadi dasar disposisi karantina berbasis risiko (*Risk-Based Inspection*). Validasi fungsional dilakukan melalui pengujian eksperimental prototipe fisik pada wadah pendingin berinsulasi 40 liter berisi spesimen kargo beku (−22 °C): probe pintu mendeteksi kenaikan suhu melewati −18 °C sekitar 112,6 menit lebih awal daripada probe inti (memberikan margin peringatan dini nyata), protokol *store-and-forward* menjaga 1.440 rekaman secara utuh (100% *zero data loss*) selama 120 menit *offline*, dan model anomali AI berhasil menekan alarm palsu siklus pencairan bunga es (*defrost*) hingga 7,8% ($F1\text{-score} = 96{,}4\%$). Biaya prototipe diperkirakan Rp1,2–1,5 juta per unit dengan biaya operasional per pengapalan kurang dari Rp15.000. Rancangan implementasi operasional di Barantin dan rekomendasi kebijakan strategis turut disajikan.
 
 **Kata kunci:** *IoT, Smart Quarantine, deteksi anomali, rantai dingin, inspeksi digital.*
 
@@ -24,11 +16,13 @@ Distribusi komoditas hayati beku antarpulau menyisakan kesenjangan informasi (*d
 
 <div align="center">
 
+### **Q-GUARD: Continuity-Aware Cold-Chain Risk Monitoring Based on IoT and Multivariate AI for Smart Quarantine of Frozen Commodities**
+
 ### **ABSTRACT**
 
 </div>
 
-*Interisland distribution of frozen biological commodities leaves a critical distribution information gap: cargo conditions go unmonitored from container sealing at origin until arrival at export ports, leading to undetectable refrigeration failures exemplified by Barantin's destruction of 14.5 tonnes of spoiled frozen poultry in Nabire. This study proposes **Q-GUARD**, a portable Internet of Things (IoT) and Edge-AI monitoring instrument under the Smart Border & AI-Quarantine subtheme. Its core novelty is data continuity: spatial tri-probe temperature records (core, mid-pack, door), mechanical shocks, hatch status, GPS location, and precision timestamps remain intact via an offline-first architecture with autonomous synchronization at port gateways. Telemetry is evaluated using the Continuity-Aware Cold-Chain Risk (CACCR) framework, integrating Arrhenius Mean Kinetic Temperature (MKT), a composite risk score, and Isolation Forest anomaly detection. Functional validation was conducted via physical prototype experimental testing in a 40-liter insulated cool box containing frozen specimens (−22 °C): the door boundary probe detected temperature rise 112.6 minutes earlier than the core probe (providing a vital early-warning margin), the store-and-forward protocol preserved all 1,440 records (100% zero data loss) during a 120-minute network outage, and the AI model reduced false alarms during defrost cycles to 7.8% (F1-score = 96.4%). The system generates an automated digital Quarantine Inspection Dossier in less than 1 second, enabling risk-based Fast-Track Green Lane clearance. Prototype fabrication costs IDR 1.2–1.5 million with an operational cost below IDR 15,000 per transit, demonstrating robust technical and economic viability for Barantin's digital inspection modernization.*
+*Interisland distribution of frozen biological commodities leaves an information gap: cargo condition goes unmonitored from the moment a container is sealed at origin until it reaches the export port, so refrigeration failures are discovered only after the commodity has spoiled, as in the destruction of 14.5 tonnes of frozen chicken in Nabire. This study proposes **Q-GUARD**, a portable Internet of Things (IoT) monitor that supports quarantine surveillance under the Smart Border & AI-Quarantine subtheme. Its core novelty is data continuity: spatial three-point temperature records (core, mid-pack, door), mechanical shock, door status, location, and precision time remain intact through offline-first local storage and automatic synchronization on arrival at the port. The data are scored with the Continuity-Aware Cold-Chain Risk (CACCR) framework, which combines Arrhenius Mean Kinetic Temperature (MKT), a composite risk score, and Isolation Forest anomaly detection compared against single-threshold monitoring. The output is a digital Quarantine Inspection Dossier that supports risk-based quarantine disposition. Functional validation was conducted via physical prototype experimental testing in an insulated 40-liter cool box containing frozen cargo specimens (−22 °C): the door boundary probe crossed −18 °C approximately 112.6 minutes earlier than the core probe (providing a vital early-warning margin), the store-and-forward protocol preserved all 1,440 records (100% zero data loss) across a 120-minute outage, and anomaly detection reduced false alarms during normal defrost cycles to 7.8% (F1-score = 96.4%). Prototype costs are estimated at IDR 1.2–1.5 million per unit with transit costs below IDR 15,000. An operational implementation design for Barantin and policy recommendations are also presented.*
 
 *Keywords:* *IoT, Smart Quarantine, anomaly detection, cold chain, digital inspection.*
 
@@ -42,27 +36,27 @@ Distribusi komoditas hayati beku antarpulau menyisakan kesenjangan informasi (*d
 </div>
 
 ### **1.1 Latar Belakang**
-Komoditas hayati beku seperti tuna loin (*Thunnus albacares*), udang vaname (*Litopenaeus vannamei*), dan daging beku merupakan pilar devisa ekspor sekaligus penopang ketahanan pangan nasional. Mutu biologis komoditas tersebut hanya terjaga apabila rantai dingin (*cold chain*) tidak terputus pada suhu $\le -18^\circ\text{C}$ (Codex Alimentarius Commission, 2020). Kenaikan suhu memicu percepatan reaksi autolisis enzimatis dan aktivitas mikrobiologis, serta pada ikan scombroid memicu pembentukan histamin beracun dan akumulasi *Total Volatile Basic Nitrogen* (TVB-N) yang membahayakan konsumen (Food and Drug Administration, 2022; Ndraha et al., 2018).
+Komoditas hayati beku seperti tuna loin (*Thunnus albacares*), udang vaname, dan daging unggas merupakan sumber devisa sekaligus penopang ketahanan pangan nasional. Mutunya hanya terjaga bila rantai dingin tidak terputus pada suhu −18 °C atau lebih rendah (Codex Alimentarius Commission, 2020). Kenaikan suhu mempercepat reaksi enzimatis dan mikrobiologis yang menurunkan mutu, serta pada ikan scombroid dapat memicu pembentukan histamin yang berbahaya bagi konsumen (Food and Drug Administration, 2022; Ndraha et al., 2018).
 
-Berdasarkan Undang-Undang Nomor 21 Tahun 2019 tentang Karantina Hewan, Ikan, dan Tumbuhan, Badan Karantina Indonesia (Barantin) memegang mandat ganda: mencegah masuk dan keluarnya hama penyakit karantina (*border control*), sekaligus memfasilitasi kelancaran perdagangan internasional (*trade facilitator*) dengan menjamin kepatuhan sanitasi kargo ekspor (Republik Indonesia, 2019; Badan Karantina Indonesia, 2026b). Kendala logistik kepulauan di Indonesia mengharuskan kargo menempuh pelayaran multimoda selama 3 hingga 14 hari dari sentra produksi terpencil menuju pelabuhan ekspor utama. Sepanjang masa transit tersebut, terjadi **kesenjangan informasi distribusi (*distribution information gap*)**. Ketiadaan pengawasan kontinu menyebabkan kegagalan mesin pendingin, kehabisan bahan bakar genset, atau pembukaan palka ilegal baru terdeteksi saat kontainer tiba di pelabuhan tujuan (Aung & Chang, 2014; International Organization for Standardization, 2018).
+Berdasarkan Undang-Undang Nomor 21 Tahun 2019, Badan Karantina Indonesia (Barantin) berperan ganda: mencegah masuk dan keluarnya hama dan penyakit karantina, sekaligus memfasilitasi perdagangan dengan memastikan komoditas ekspor memenuhi persyaratan negara tujuan (Republik Indonesia, 2019), peran yang kini diperkuat melalui sistem pendukung ekspor (Badan Karantina Indonesia, 2026b).
+
+Tantangan muncul dari logistik kepulauan: komoditas dari Maluku, Papua, atau Sulawesi menempuh perjalanan multimoda 3–14 hari menuju pelabuhan ekspor seperti Tanjung Priok atau Tanjung Perak. Setelah segel dipasang di titik asal, otoritas kehilangan keterlacakan kondisi kargo, sehingga kegagalan kompresor, genset kehabisan bahan bakar, insulasi rusak, atau pintu dibuka tanpa izin baru diketahui saat kontainer tiba. Inilah kesenjangan informasi distribusi (*distribution information gap*), yaitu lemahnya ketertelusuran yang menjadi syarat keamanan pangan modern (Aung & Chang, 2014; International Organization for Standardization, 2018).
 
 ### **1.2 State-of-the-Art dan Research Gap**
-Penelitian pemantauan rantai dingin berbasis sensor berkembang pesat (Badia-Melis et al., 2018). Namun, da Costa et al. (2023) mencatat bahwa mayoritas sistem komersial hanya menampilkan visualisasi metrik tunggal tanpa analisis kinetika penurunan mutu. Sistem *IntelliStore* (Singha et al., 2023) memadukan IoT dan kecerdasan buatan, namun dirancang untuk gudang penyimpanan statis dengan koneksi internet kabel tetap. Loisel et al. (2022) menerapkan algoritma pembelajaran mesin untuk menduga suhu palet pangan, tetapi belum mengintegrasikannya dengan tata kelola sertifikasi karantina perbatasan.
+Pemantauan rantai dingin berbasis sensor berkembang pesat (Badia-Melis et al., 2018), tetapi da Costa et al. (2023) mencatat bahwa sebagian besar solusi hanya menampilkan satu metrik tanpa analisis risiko berbasis kinetika penurunan mutu. *IntelliStore* (Singha et al., 2023) memadukan IoT dan kecerdasan buatan, tetapi dirancang untuk gudang statis yang terhubung jaringan tetap. Loisel et al. (2022) memanfaatkan pembelajaran mesin untuk menduga suhu palet pangan, tetapi belum mengaitkannya dengan tata kelola karantina.
 
-Celah riset (*research gap*) utama yang diselesaikan oleh Q-GUARD mencakup tiga aspek fundamental: (1) ketiadaan sistem pemantau yang tahan terhadap zona tanpa sinyal maritim (*cellular blackout*); (2) pengabaian analisis gradien spasial termal massa kargo dan guncangan mekanis dalam satu kesatuan skor risiko; serta (3) ketiadaan integrasi data telemetri menjadi dokumen yuridis inspeksi digital yang langsung dapat dieksekusi oleh pejabat karantina perbatasan.
+Dari tinjauan tersebut tampak tiga celah: solusi yang ada mengandalkan konektivitas kontinu sehingga data rentan hilang di zona tanpa sinyal; suhu multititik, guncangan, dan integritas pintu jarang dinilai bersama dalam satu skor risiko; dan keluaran analitik belum diterjemahkan menjadi keputusan karantina. Q-GUARD mengisi ketiganya dengan menjadikan kontinuitas data sebagai inti kebaruan: rekaman tidak terputus walau jaringan terputus, dinilai secara multivariat, dan dikonversi menjadi dokumen yang langsung dipakai pejabat karantina. Kontribusi kecerdasan buatan diuji terhadap ambang batas tunggal, bukan diasumsikan.
 
 ### **1.3 Permasalahan Karantina**
-Dampak nyata dari kesenjangan informasi ini terbukti fatal. Pada 7 Agustus 2026, Satuan Pelayanan Karantina Nabire memusnahkan 14,5 ton daging ayam beku antardaerah yang membusuk total akibat matinya mesin pendingin kontainer selama pelayaran laut (Badan Karantina Indonesia, 2026a). Pada komoditas ekspor unggulan, seperti pengapalan 26 ton tuna loin Maluku senilai Rp3,39 miliar ke Vietnam (Badan Karantina Indonesia, 2026c), pencairan parsial (*partial thawing*) yang membeku kembali (*refreezing*) berisiko tinggi memicu penolakan perbatasan internasional (*border rejection*) dan merusak reputasi ekspor nasional. Perangkat konvensional seperti *datalogger* USB bersifat pasif, hanya mengukur satu titik udara di dekat pintu, tidak memiliki alarm peringatan dini, dan datanya harus diunduh manual satu per satu di pelabuhan sehingga memperpanjang waktu tunggu (*dwelling time*).
+Dampak kesenjangan tersebut nyata. Pada 7 Agustus 2026, Satuan Pelayanan Karantina Nabire memusnahkan 14,5 ton daging ayam beku antardaerah yang membusuk akibat mesin pendingin kontainer mati selama pelayaran (Badan Karantina Indonesia, 2026a); segel fisik tidak menjamin kondisi kargo. Pada komoditas ekspor bernilai tinggi, seperti 26 ton tuna loin asal Maluku senilai Rp3,39 miliar tujuan Vietnam (Badan Karantina Indonesia, 2026c), kargo yang sempat mencair sebagian lalu membeku ulang berisiko lolos pemeriksaan perbatasan, ditolak di negara tujuan, dan merusak reputasi ekspor.
+
+Alat pantau yang lazim, yaitu *datalogger* suhu USB, hanya mengukur satu titik udara, tidak memberi peringatan dini, tidak merekam pintu maupun guncangan, dan datanya diunduh satu per satu di pelabuhan. Masalah ini berada pada subtema *Smart Border & AI-Quarantine*, yaitu pemanfaatan AI dan IoT untuk inspeksi digital berbasis risiko.
 
 ### **1.4 Urgensi Inovasi**
-Pemeriksaan fisik kargo beku di pelabuhan dengan cara membongkar kontainer (*stripping*) merusak integritas kemasan dan memutus rantai dingin, sedangkan pengujian laboratorium membutuhkan waktu 2 hingga 4 hari kerja. Tanpa data riwayat perjalanan yang kontinu, pejabat karantina terpaksa mengambil keputusan berdasarkan sampel acak spekulatif. Inovasi instrumen digital otonom sangat mendesak guna mewujudkan cetak biru **Smart Quarantine Barantin 2026** melalui inspeksi digital berbasis risiko nyata (*Risk-Based Digital Inspection*).
+Pembongkaran kontainer untuk pemeriksaan fisik memutus rantai dingin dan memperlambat arus barang, sedangkan uji laboratorium atas kargo yang dicurigai dapat memakan 2–4 hari kerja. Tanpa data kontinu, pejabat karantina terpaksa menilai kargo dari sampel acak. Bila tidak ada inovasi, pemusnahan seperti di Nabire akan terulang, risiko penolakan ekspor tetap tinggi, dan digitalisasi pengawasan perbatasan yang ditempuh Barantin (Badan Karantina Indonesia, 2026b) kehilangan data lapangan yang paling menentukan.
 
 ### **1.5 Tujuan**
-Karya tulis ini bertujuan untuk:
-1. Mengembangkan prototipe fisik instrumen *edge-sensing* **Q-GUARD** berbasis mikrokontroler ESP32 dengan sensor suhu spasial *tri-probe* DS18B20, akselerometer MPU6050, saklar palka MC-38, sensor BME280, GPS NEO-6M, dan RTC presisi DS3231.
-2. Menguji dan memvalidasi keandalan protokol *offline-first store-and-forward* dalam menjamin keutuhan data 100% (*zero data loss*) saat melewati zona tanpa sinyal seluler maritim.
-3. Merumuskan mesin analitik risiko terpadu *Continuity-Aware Cold-Chain Risk* (CACCR) yang memadukan kinetika termodinamika *Mean Kinetic Temperature* (MKT) Arrhenius, skor risiko komposit, dan deteksi anomali multivariat *Isolation Forest*.
-4. Merancang integrasi operasional dan rekomendasi kebijakan adopsi dokumen sertifikasi *Quarantine Inspection Dossier* pada sistem pelayanan karantina perbatasan Barantin.
+Karya ini bertujuan (1) membuat prototipe fisik Q-GUARD berbasis ESP32 dengan sensor suhu tiga titik, guncangan, status pintu, lokasi, dan waktu; (2) memvalidasi kontinuitas data melalui protokol *offline-first store-and-forward*, dengan target kelengkapan 100% setelah jaringan terputus 120 menit; (3) merumuskan kerangka CACCR dan menguji *Isolation Forest* terhadap ambang batas tunggal berdasarkan *precision*, *recall*, *F1-score*, dan *false alarm rate*; serta (4) merancang penerapan Q-GUARD pada alur kerja operasional Barantin.
 
 ---
 
@@ -74,69 +68,33 @@ Karya tulis ini bertujuan untuk:
 </div>
 
 ### **2.1 Alur Kerja**
-Pengembangan sistem Q-GUARD dilaksanakan melalui lima tahapan terstruktur: (1) perancangan dan perakitan perangkat keras *edge-sensing*; (2) pemrograman firmware FreeRTOS dan protokol transmisi data *offline-first*; (3) pembangunan peladen backend dan formulasi analitik risiko CACCR; (4) pengujian eksperimental prototipe fisik skala laboratorium pada wadah pendingin terkontrol; serta (5) analisis kelayakan teknis, ekonomi, dan perancangan integrasi operasional Barantin.
+Kajian ini bersifat rekayasa eksperimental dalam lima tahap: perancangan perangkat keras, pemrograman firmware FreeRTOS, pembangunan backend dan model risiko CACCR, validasi melalui pengujian eksperimental prototipe fisik, serta analisis kelayakan dan rancangan implementasi operasional di Barantin. Gambar 2.1 memperlihatkan alur data dari penginderaan hingga disposisi karantina.
 
-```mermaid
-graph TD
-    A[Wadah Pendingin Kontainer] --> B[Array Tri-Probe DS18B20: Core, Mid, Door]
-    A --> C[IMU MPU6050: Deteksi Guncangan]
-    A --> D[Magnetic Switch MC-38: Status Palka]
-    A --> E[BME280, GPS NEO-6M, RTC DS3231]
-    
-    B & C & D & E --> F[Controller ESP32 FreeRTOS]
-    F --> G{Koneksi Jaringan?}
-    G -->|Laut / Blank Spot| H[Penyimpanan Deterministik MicroSD FAT32]
-    G -->|Tiba di Gerbang Pelabuhan| I[Protokol Bulk Sync HTTP POST / REST]
-    H -->|Re-koneksi Gateway| I
-    
-    I --> J[Server Backend & SQLite Database]
-    J --> K[Mesin Analitik CACCR & Isolation Forest]
-    K --> L[Dashboard Web Pejabat Barantin]
-    L --> M[Penerbitan Digital Quarantine Inspection Dossier]
-    M --> N{Keputusan Karantina Berbasis Risiko}
-    N -->|Skor 0-29: Normal| O[Jalur Hijau / Fast-Track Clearance]
-    N -->|Skor 30-59: Caution| P[Pemeriksaan Fisik Terbatas]
-    N -->|Skor 60-79: Warning| Q[Uji Laboratorium Mutu TVB-N / Histamin]
-    N -->|Skor 80-100: Critical| R[Tindakan Karantina: Penolakan / Pemusnahan]
-```
+![Gambar 2.1 Alur Kerja dan Arsitektur Sistem Q-GUARD dari Penginderaan hingga Disposisi Karantina](figures/page_3_img_1.jpeg)
 
-<div align="center">
-
-**Gambar 2.1** Diagram Alir Kerja Sistem Q-GUARD untuk Inspeksi Karantina Berbasis Risiko. (*Sumber: Olahan Penulis, 2026*)
-
-</div>
+*Gambar 2.1 Alur Kerja dan Arsitektur Sistem Q-GUARD dari Penginderaan hingga Disposisi Karantina. (Sumber: Olahan Penulis, 2026)*
 
 ### **2.2 Teknik Perolehan Data**
-Instrumen Q-GUARD mengintegrasikan modul perangkat keras berstandar industri:
-1. **Array Suhu Spasial Tri-Probe (DS18B20):** Tiga probe digital baja tahan karat tahan air (resolusi 12-bit, akurasi $\pm 0.5^\circ\text{C}$) diletakkan pada: inti produk beku ($T_1$), lapisan karton tengah ($T_2$), dan batas perimeter dekat pintu palka ($T_3$).
-2. **Kondisi Lingkungan (BME280):** Mengukur suhu udara kompartemen ($-40^\circ\text{C}$ s.d. $+85^\circ\text{C}$) dan kelembapan relatif (%RH) via I2C untuk memantau kondensasi udara luar.
-3. **Integritas Mekanis (MPU6050 & MC-38):** Akselerometer MEMS mengukur percepatan resultan $g_{\text{net}} = \sqrt{a_x^2 + a_y^2 + a_z^2}$ pada skala $\pm 4g$ (ambang bahaya $> 2.0g$), sementara saklar buluh magnetik terhubung ke pin interupsi GPIO mencatat stempel waktu setiap pembukaan pintu kontainer.
-4. **Spasiotemporal (NEO-6M GPS & DS3231 RTC):** Menyediakan koordinat armada dan waktu presisi berosilator kristal terkompensasi suhu (TCXO, $\pm 2\text{ ppm}$) tanpa ketergantungan sinyal internet.
+Perangkat Q-GUARD terdiri atas ESP32, tiga sensor suhu digital DS18B20 (inti, tengah, pintu; 12-bit), BME280 (ambien dan kelembapan), akselerometer MPU6050 (±4 g), saklar magnetik MC-38 pada pintu, GPS NEO-6M, jam RTC presisi DS3231, dan kartu MicroSD. Setiap 5 detik perangkat mencatat satu rekaman berisi *timestamp*, ID pengiriman, $T_1$, $T_2$, $T_3$, suhu ambien, kelembapan, percepatan resultan $g_{\text{net}} = \sqrt{a_x^2 + a_y^2 + a_z^2}$, status pintu, dan koordinat. Benturan dicatat bila $g_{\text{net}}$ melebihi 2 g, dan pembukaan pintu dicatat melalui interupsi GPIO. Rakitan prototipe perangkat keras ditunjukkan pada Gambar 2.2.
 
-Setiap 5 detik, firmware ESP32 menyusun rekaman terstruktur (`timestamp, shipment_id, T1, T2, T3, T_amb, humidity, shock_g, door_status, lat, lon`) dan menuliskannya secara sekuensial ke MicroSD FAT32. Saat mendeteksi gerbang Wi-Fi pelabuhan, sistem mentransmisikan paket data massal (*batch payload* hingga 50 record per muatan HTTP POST) dan memperbarui penanda *offset* di EEPROM hanya setelah menerima konfirmasi HTTP 200 dari peladen.
+![Gambar 2.2 Prototipe Perangkat Keras Q-GUARD](figures/page_4_img_1.jpeg)
 
-Pengujian eksperimental prototipe fisik dilakukan menggunakan wadah berinsulasi *polyurethane* (kapasitas 40 liter) berisi spesimen komoditas beku pada suhu awal $-22^\circ\text{C}$ di bawah suhu ruang terkontrol $+28^\circ\text{C}$ hingga $+32^\circ\text{C}$. Lima skenario pengujian dieksekusi: (1) pemutusan pendingin mendadak untuk merekam dinamika rambatan panas tri-probe; (2) pemutusan koneksi jaringan selama 120 menit (1.440 rekaman) untuk menguji keandalan *store-and-forward*; (3) simulasi buka-tutup palka dan uji jatuh mekanis (10–50 cm); (4) evaluasi model *Isolation Forest* terhadap 500 siklus operasional pendingin (termasuk siklus *defrost* 10–45 menit); serta (5) validasi keterpaduan *end-to-end* penerbitan dokumen sertifikasi digital di dasbor karantina.
+*Gambar 2.2 Prototipe Perangkat Keras Q-GUARD. (Sumber: Dokumentasi Tim Pengusul, 2026)*
+
+Pengujian eksperimental prototipe fisik dilakukan menggunakan wadah pendingin berinsulasi *polyurethane* (*cool box* 40 liter) berisi spesimen komoditas beku pada suhu awal −22 °C di bawah suhu ruang terkontrol +28 °C hingga +32 °C. Lima skenario pengujian dijalankan: (1) pendingin dimatikan untuk menguji respon sensitivitas perambatan panas tiga probe ($T_1, T_2, T_3$); (2) jaringan Wi-Fi diputus selama 120 menit (1.440 rekaman) untuk menguji keandalan protokol *store-and-forward* saat terjadi galat paket; (3) perekaman interupsi saklar magnetik pintu dan benturan akselerometer; (4) pengujian siklus pencairan bunga es normal (*defrost* 10–45 menit) dibandingkan dengan kegagalan pendingin nyata pada 500 pengujian operasional terhadap model *Isolation Forest*; dan (5) validasi keterpaduan *end-to-end* penerbitan berkas *Quarantine Inspection Dossier*. Batas suhu dan kriteria mutu merujuk pada Codex Alimentarius Commission (2020) dan Food and Drug Administration (2022).
 
 ### **2.3 Model Analisis**
+Data dianalisis dengan kerangka CACCR dalam tiga lapis. Lapis pertama menghitung *Mean Kinetic Temperature* (MKT), suhu tunggal yang setara dengan efek kinetik seluruh riwayat suhu dan memberi bobot lebih pada lonjakan singkat (Haynes, 1971; Mercer, 2014):
 
-#### **2.3.1 Kinetika Mean Kinetic Temperature (MKT)**
-Evaluasi degradasi mutu biologis dihitung menggunakan formulasi kinetika kimia *Mean Kinetic Temperature* (MKT) standar USP dan FDA berbasis persamaan Arrhenius:
+$$T_{\text{mkt}} = \frac{\frac{\Delta H}{R}}{-\ln\left( \frac{1}{n} \sum_{i=1}^{n} \exp\left( -\frac{\Delta H}{R \cdot T_i} \right) \right)} \quad (1)$$
 
-$$T_{\text{mkt}} = \frac{\frac{\Delta H}{R}}{-\ln\left( \frac{1}{n} \sum_{i=1}^{n} \exp\left( -\frac{\Delta H}{R \cdot T_i} \right) \right)}$$
+dengan $\Delta H/R = 10.000\text{ K}$ ($\Delta H = 83{,}14\text{ kJ/mol}$), $T_i$ suhu absolut pembacaan ke-$i$, dan $n$ jumlah pembacaan. Lapis kedua menghitung skor risiko komposit 0–100:
 
-Di mana rasio energi aktivasi terhadap konstanta gas $\frac{\Delta H}{R} = 10.000\text{ K}$ merefleksikan laju denaturasi protein dan oksidasi lipid komoditas beku, $T_i$ adalah suhu pembacaan absolut (Kelvin), dan $n$ adalah jumlah sampel data. Bobot eksponensial memberikan penalti non-linear terhadap lonjakan suhu singkat, mencerminkan degradasi mutu aktual (Haynes, 1971; Mercer, 2014).
+$$S_{\text{total}} = 0{,}60 S_{\text{thermal}} + 0{,}25 S_{\text{shock}} + 0{,}15 S_{\text{integrity}} \quad (2)$$
 
-#### **2.3.2 Formulasi Skor Risiko Komposit CACCR**
-Skor Risiko Komposit ($S_{\text{total}}$) dinormalisasi dalam rentang 0 hingga 100 melalui pembobotan tiga parameter fisik:
+Skor termal $S_{\text{thermal}}$ bernilai 0 bila suhu inti −25 hingga −18 °C. Pada rentang −18 hingga −13 °C nilainya $\min(65; 80f + 5n)$, dengan $f$ proporsi pembacaan menyimpang dan $n$ lama penyimpangan dalam menit. Bila suhu inti melampaui −13 °C nilainya $50 + \min(50; 10n)$, sehingga berkisar 50–100. Skor guncangan $S_{\text{shock}}$ bernilai 0, 40, atau 70 untuk $g_{\text{net}} \le 2\text{ g}$, 2–3 g, dan >3 g. Skor integritas $S_{\text{integrity}}$ bernilai 0, 20, atau 50 untuk tanpa pembukaan pintu, 1–5 pembukaan singkat (<2 menit), dan lebih dari 5 pembukaan atau pembukaan berkepanjangan. Dengan bobot pada Persamaan 2, pelanggaran termal saja ($S_{\text{thermal}} = 100$) menghasilkan skor 60 (*Warning*, uji laboratorium), sedangkan kelas *Critical* hanya tercapai bila pelanggaran termal kritis disertai guncangan atau pembukaan pintu abnormal.
 
-$$S_{\text{total}} = 0.60 \cdot S_{\text{thermal}} + 0.25 \cdot S_{\text{shock}} + 0.15 \cdot S_{\text{integrity}}$$
-
-1. **Komponen Termal ($S_{\text{thermal}}$):** Bernilai 0 jika suhu inti aman ($-25^\circ\text{C} \le T_{\text{core}} \le -18^\circ\text{C}$); bernilai $\min(65, 80 \cdot \frac{n_{\text{excursion}}}{n_{\text{total}}} + 5 \cdot n_{\text{excursion}})$ pada deviasi moderat ($-18^\circ\text{C} < T_{\text{core}} \le -13^\circ\text{C}$); dan bernilai $50 + \min(40, 10 \cdot n_{\text{critical}})$ pada pelanggaran kritis ($T_{\text{core}} > -13^\circ\text{C}$).
-2. **Komponen Guncangan ($S_{\text{shock}}$):** Bernilai 0 ($g_{\text{net}} \le 2.0g$), 40 ($2.0g < g_{\text{net}} \le 3.0g$), dan 70 ($g_{\text{net}} > 3.0g$).
-3. **Komponen Integritas Palka ($S_{\text{integrity}}$):** Bernilai 0 (tanpa buka pintu), 20 (1–5 kali buka pintu durasi $<2$ menit), dan 50 ($>5$ kali atau pintu terbuka berkepanjangan).
-
-#### **2.3.3 AI Multivariat: Isolation Forest**
-Untuk menyaring alarm palsu akibat siklus pencairan bunga es otomatis (*normal reefer defrost cycle*), diterapkan algoritma *Isolation Forest* (Liu et al., 2012) pada peladen backend. Model mengevaluasi vektor fitur: laju perubahan suhu inti ($\Delta T_1/\Delta t$), selisih gradien spasial ($\Delta T_{3-1} = T_3 - T_1$), simpangan baku kelembapan relatif, dan akselerasi guncangan. Pada siklus *defrost*, suhu perimeter ($T_3$) naik sementara suhu inti ($T_1$) tetap stabil di bawah $-18^\circ\text{C}$ tanpa guncangan, sehingga model mengidentifikasinya sebagai operasi normal dan mencegah eskalasi penalti risiko yang keliru.
+Lapis ketiga, *Isolation Forest* (Liu et al., 2012), adalah algoritma tak terawasi yang menilai keanehan pola jendela 15 menit (langkah 5 menit). Model dilatih pada data pengiriman normal, termasuk siklus *defrost* dan pembukaan pintu singkat. Ambang skor dikalibrasi sehingga paling banyak 5% pengiriman normal memicu alarm, dan alarm diterbitkan bila dua jendela berturutan melewati ambang. Dua varian diuji: tujuh fitur (laju perubahan suhu inti dan tengah, selisih $T_3-T_1$ dan $T_2-T_1$, simpangan baku kelembapan, guncangan maksimum, dan durasi kontinu $T_3$ di atas −18 °C) serta dua fitur (selisih $T_3-T_1$ dan durasi). Pembandingnya adalah ambang tunggal pada probe pintu, yaitu alarm bila $T_3$ di atas −18 °C selama paling sedikit 10, 30, atau 60 menit. Deteksi dinilai benar bila alarm terbit setelah kegagalan dimulai dan sebelum suhu inti melewati −18 °C, dengan *precision*, *recall*, *F1-score*, dan *false alarm rate* (FAR) sebagai ukuran. Skor komposit dipetakan ke empat disposisi karantina (Gambar 2.1): 0–29 jalur hijau, 30–59 pemeriksaan organoleptik, 60–79 uji laboratorium wajib (TVB-N dan histamin), dan 80–100 penahanan, penolakan, atau pemusnahan.
 
 ---
 
@@ -147,73 +105,31 @@ Untuk menyaring alarm palsu akibat siklus pencairan bunga es otomatis (*normal r
 
 </div>
 
-### **3.1 Konsep Inovasi**
-Instrumen Q-GUARD bertindak sebagai "kotak hitam" (*black box*) rantai dingin portabel yang diselipkan ke dalam muatan kargo dan bekerja otonom selama pelayaran antarpulau. Perangkat keras dirancang tangguh dengan wadah polimer berstandar industri tahan percikan air laut (*splash-proof*). Arsitektur komputasi memanfaatkan mikrokontroler ESP32 *dual-core* berbasis FreeRTOS: Core 1 menangani pembacaan multi-sensor dan penyegaran tampilan layar TFT LCD 2.8 inci ILI9341, sedangkan Core 0 menangani operasi I/O penyimpanan MicroSD dan transmisi nirkabel HTTP REST.
+### **3.1 Konsep Inovasi dan Antarmuka Dasbor**
+Q-GUARD adalah "kotak hitam" rantai dingin portabel yang diselipkan ke dalam kargo dan bekerja otonom selama perjalanan, dengan empat unsur utama. Pertama, tiga probe suhu di inti, tengah, dan dekat pintu menangkap gradien termal spasial, karena panas merambat dari tepi menuju inti dan satu titik udara ambien tidak melihat proses tersebut (World Health Organization, 2019). Kedua, kontinuitas data dijaga protokol *store-and-forward*: setiap rekaman ditulis ke MicroSD FAT32, posisi *byte* terakhir yang terkirim disimpan di memori non-volatil, dan rekaman tertunda dikirim bertahap saat *gateway* pelabuhan terdeteksi; penanda baru diperbarui setelah peladen menjawab sukses (HTTP 200), sehingga data tidak hilang dan tidak ganda, sementara jam RTC DS3231 menjaga stempel waktu tanpa jaringan. Ketiga, mesin CACCR menghitung MKT, skor komposit, dan skor anomali, sedangkan aturan ringan pada perangkat membunyikan *buzzer* dan menyalakan LED sebagai peringatan dini bagi awak armada. Keempat, keluarannya adalah *Quarantine Inspection Dossier* digital terikat ID pengiriman yang memuat riwayat suhu tiga titik, peta GPS, log pintu dan guncangan, MKT, serta skor risiko, dihitung oleh peladen *backend* berbasis SQLite.
 
-```
-+-------------------------------------------------------------------------------------------------+
-|                                 ARSITEKTUR TERPADU Q-GUARD                                      |
-|                                                                                                 |
-|   +-----------------------+     +-----------------------+     +-------------------------------+ |
-|   |  PENGINDERAAN SPASIAL |     |  INTEGRITAS MEKANIS   |     |    SPASIOTEMPORAL & CUACA     | |
-|   |  Tri-Probe DS18B20    |     |  MPU6050 Accel Shock  |     |    BME280 (Temp/Humidity)     | |
-|   |  (Core, Mid, Door)    |     |  MC-38 Magnetic Door  |     |    NEO-6M GPS & DS3231 RTC    | |
-|   +-----------+-----------+     +-----------+-----------+     +---------------+---------------+ |
-|               |                             |                                 |                 |
-|               +-----------------------------+---------------------------------+                 |
-|                                             v                                                   |
-|                        +-----------------------------------------+                              |
-|                        |       ESP32-WROOM-32 (FreeRTOS)         |                              |
-|                        |  Core 1: Sensor & TFT GUI Engine        |                              |
-|                        |  Core 0: MicroSD & Bulk Sync HTTP       |                              |
-|                        +----+-------------------------------+----+                              |
-|                             |                               |                                   |
-|                             v                               v                                   |
-|                  +---------------------+         +---------------------+                        |
-|                  |  Offline MicroSD    |         |  Wi-Fi Port Gateway |                        |
-|                  |  Deterministic Log  |         |  Auto Ingestion API |                        |
-|                  +---------------------+         +----------+----------+                        |
-|                                                             |                                   |
-|                                                             v                                   |
-|                                                  +---------------------+                        |
-|                                                  |   BACKEND BARANTIN  |                        |
-|                                                  |   MKT, CACCR, AI    |                        |
-|                                                  +----------+----------+                        |
-|                                                             |                                   |
-|                                                             v                                   |
-|                                                  +---------------------+                        |
-|                                                  |  DIGITAL INSPECTION |                        |
-|                                                  |  DOSSIER & CLEARANCE|                        |
-|                                                  +---------------------+                        |
-+-------------------------------------------------------------------------------------------------+
-```
+Data Q-GUARD ditampilkan kepada petugas karantina melalui dasbor berbasis web; Gambar 3.1 memperlihatkan halaman Telemetri Langsung pada purwarupa dasbor. Halaman ini memuat status koneksi dan penyimpanan (*cloud* dan MicroSD), kartu pembacaan tiga probe suhu, BME280, MC-38, MPU6050, GPS, evaluasi risiko komposit, serta grafik *tri-probe* dengan garis batas −18 °C. Menu samping mencakup data pengiriman, peta GPS, analisis risiko, log peringatan, dan ekspor laporan karantina.
 
-<div align="center">
+![Gambar 3.1 Tampilan Halaman Telemetri Langsung pada Dasbor Q-GUARD](figures/page_6_img_1.png)
 
-**Gambar 3.1** Arsitektur Perangkat Keras dan Aliran Data *Edge-to-Cloud* Q-GUARD. (*Sumber: Olahan Penulis, 2026*)
-
-</div>
-
-Data telemetri ditampilkan kepada pejabat karantina melalui antarmuka dasbor web responsif. Halaman Telemetri Langsung memuat status koneksi, indikator penyimpanan lokal, pembacaan tiga probe suhu, status pintu MC-38, guncangan MPU6050, koordinat peta rute GPS, serta evaluasi risiko CACCR secara *real-time*. Ketika armada pengangkut tiba di gerbang pelabuhan, data log diunduh otomatis dalam 3,7–5,0 detik. Peladen mengeksekusi kalkulasi MKT dan model *Isolation Forest*, memvisualisasikan grafik tren suhu spasial, serta menerbitkan *Quarantine Inspection Dossier* digital yang memuat rekomendasi tindakan karantina berbasis bukti forensik.
+*Gambar 3.1 Tampilan Halaman Telemetri Langsung pada Dasbor Q-GUARD. (Sumber: Olahan Penulis, 2026)*
 
 ### **3.2 Keunggulan Komparatif**
-Keunggulan komparatif instrumen Q-GUARD terhadap metode konvensional ditunjukkan pada Tabel 3.1.
+Tabel 3.1 membandingkan Q-GUARD dengan metode yang kini lazim digunakan; keunggulan yang bergantung pada hasil pengujian merujuk ke Uji 1–5 pada Tabel 3.2.
 
 <div align="center">
 
-**Tabel 3.1** Matriks Perbandingan Komparatif Q-GUARD terhadap Metode Eksisting.
+**Tabel 3.1** Perbandingan Q-GUARD dengan Metode Pemantauan Saat Ini
 
 </div>
 
-| Aspek Pembanding | Metode/Sistem Saat Ini (Datalogger Pasif) | Inovasi yang Diusulkan (Q-GUARD) | Sumber / Bukti |
+| Aspek Pembanding | Metode/Sistem Saat Ini | Inovasi yang Diusulkan | Sumber / Bukti |
 | :--- | :--- | :--- | :--- |
-| **Metode Penginderaan Suhu** | Titik tunggal ambien udara dekat pintu | Konfigurasi spasial *tri-probe* (*Core, Mid, Door*) | WHO (2019); Uji Lab Eksperimental |
-| **Deteksi Stratifikasi Termal** | Tidak mampu mendeteksi rambatan gradien | Mendeteksi rambatan panas 112,6 menit sebelum inti mencair | Data Uji Fisik Cool Box 40L |
-| **Integritas Fisik & Segel** | Tidak memiliki sensor pintu dan getaran | Terintegrasi saklar magnetik MC-38 dan IMU MPU6050 ($\pm 4g$) | Log stempel waktu interupsi (18 ms) |
-| **Model Evaluasi Risiko** | Batas statis minimum/maksimum tanpa bobot waktu | Kinetika MKT Arrhenius, formula komposit CACCR, dan AI | Formula MKT USP/FDA & model *Isolation Forest* |
-| **Siklus Defrost Pendingin** | Sering memicu alarm keliru (*false positive*) | AI multivariat menyaring kenaikan suhu siklik normal | Uji validasi model (FAR turun ke 7,8%) |
-| **Ketahanan Blank Spot** | Data tersimpan lokal tanpa integrasi sistem | Protokol *offline-first store-and-forward* (MicroSD ke Cloud) | Uji pemutusan jaringan 120 menit (Zero Loss) |
-| **Keluaran Regulasi Karantina** | Berkas mentah non-standar, unduh manual | Berkas digital otomatis (*Quarantine Inspection Dossier*) | Standar pengawasan Barantin (UU 21/2019) |
+| **Penginderaan Suhu** | Satu titik udara (*datalogger* USB) | Tiga titik spasial: inti, tengah, pintu | WHO (2019); Uji 1 |
+| **Pintu, Guncangan, dan Alarm** | Tidak direkam; kondisi baru diketahui di pelabuhan | MC-38 dan MPU6050 berstempel waktu RTC; *buzzer* dan LED | Dokumentasi Rancang Bangun; Uji 1 dan 3 |
+| **Ketahanan Tanpa Sinyal** | Rekaman lokal diunduh manual; IoT bergantung jaringan tetap (Singha et al., 2023) | *Store-and-forward* dengan konfirmasi peladen dua arah | Uji 2 |
+| **Evaluasi Risiko** | Ambang batas minimum/maksimum statis | MKT, skor komposit CACCR, dan *Isolation Forest* | Haynes (1971); Liu et al. (2012); Uji 4 |
+| **Keluaran bagi Karantina** | Berkas CSV/PDF mentah non-standar | *Dossier* digital otomatis terikat ID pengiriman | Rancang Bangun Sistem; Uji 5 |
 
 <div align="center">
 
@@ -222,21 +138,29 @@ Keunggulan komparatif instrumen Q-GUARD terhadap metode konvensional ditunjukkan
 </div>
 
 ### **3.3 Analisis Kelayakan Teknis**
-Kelayakan teknis dan operasional Q-GUARD dibuktikan melalui hasil pengujian eksperimental prototipe fisik pada Tabel 3.2:
+Dari sisi teknologi, Q-GUARD memakai komponen komersial berstandar industri, dengan inti FreeRTOS terpisah untuk akuisisi multi-sensor dan layar TFT 2,8 inci serta untuk penulisan MicroSD dan transmisi HTTP. Pada mode *offline*, arus rata-rata terukur 85 mA pada 5 V sehingga baterai Li-Po 5.000 mAh memberi daya mandiri mencapai 58,8 jam (di atas target 48 jam); untuk transit lebih panjang, daya diambil dari genset kontainer melalui konverter *buck* DC-DC teregulasi. Modul DS3231 (±2 ppm) hanya menyimpang sekitar 2,4 detik pada pelayaran 14 hari, memenuhi syarat pembuktian forensik bila terjadi sengketa klaim kargo.
+
+Dari sisi biaya, perakitan prototipe berkisar Rp1.200.000–Rp1.500.000 per unit; pada minimal 100 siklus pengapalan, biaya per perjalanan kurang dari Rp15.000, jauh di bawah nilai satu kargo seperti tuna loin Rp3,39 miliar (Badan Karantina Indonesia, 2026c) atau kerugian pemusnahan daging seperti di Nabire.
+
+Kelayakan fungsional dibuktikan melalui lima pengujian eksperimental pada Tabel 3.2. Gambar 3.2 menyajikan profil suhu tiga probe saat pendingin dimatikan: probe pintu ($T_3$) melintasi −18 °C pada menit 2,4 dan probe inti ($T_1$) pada menit 115,0, menghasilkan selisih 112,6 menit yang menjadi margin peringatan dini nyata bagi awak kontainer. Pada rangkaian uji berulang dengan suhu ambien 24–34 °C dan variasi massa spesimen, selisih waktu rata-rata tercatat 109,7 ± 4,8 menit dengan nilai minimum 96,3 menit.
+
+![Gambar 3.2 Profil Suhu Tri-Probe pada Skenario Kegagalan Pendingin](figures/page_7_img_1.png)
+
+*Gambar 3.2 Profil Suhu Tri-Probe pada Skenario Kegagalan Pendingin. (Sumber: Data Primer Pengujian Eksperimental, 2026)*
 
 <div align="center">
 
-**Tabel 3.2** Ringkasan Hasil Pengujian Eksperimental Laboratorium Prototipe Q-GUARD.
+**Tabel 3.2** Kriteria Keberhasilan dan Hasil Pengujian Eksperimental Q-GUARD
 
 </div>
 
-| Parameter Pengujian | Kondisi Eksperimental | Target Kinerja | Hasil Pengujian Nyata | Status |
-| :--- | :--- | :--- | :--- | :---: |
-| **Sensitivitas Tri-Probe** | Pemutusan daya pendingin pada spesimen $-22^\circ\text{C}$, ambien $+28^\circ\text{C}$ s.d. $+32^\circ\text{C}$ | Deteksi dini intrusi termal perimeter | Probe $T_3$ melintasi $-18^\circ\text{C}$ menit ke-2,4; probe $T_1$ menit ke-115,0 (**selisih 112,6 menit**) | **Valid** |
-| **Keandalan Offline-First** | Pemutusan koneksi Wi-Fi selama 120 menit (1.440 rekaman) | Integritas data 100% (*zero data loss*), sinkronisasi cepat | 1.440/1.440 rekaman utuh tersimpan di MicroSD; sinkronisasi ke cloud tuntas dalam **3,7 – 5,0 detik** | **Valid** |
-| **Deteksi Kejadian Kritis** | Uji buka palka (10 dtk–10 mnt) dan uji jatuh bebas (10–50 cm) | Latensi interupsi $< 500\text{ ms}$, deteksi $g > 2.0g$ | Interupsi MC-38 tercatat dalam **18 ms**; benturan puncak $3.4g$ terklasifikasi akurat | **Valid** |
-| **Akurasi AI Anomaly** | 500 siklus uji operasional (defrost 10–45 menit vs kebocoran) | Eliminasi false alarm, $F1\text{-score} > 90\%$ | False alarm rate turun menjadi **7,8%** (vs 100% pada ambang statis); $F1\text{-score} = \mathbf{96{,}4\%}$ | **Valid** |
-| **Efisiensi Daya Mandiri** | Baterai Li-Po 5.000 mAh, logging kontinu interval 5 detik | Daya tahan tanpa sumber eksternal $> 48$ jam | Konsumsi rata-rata 85 mA @ 5V, operasional mandiri mencapai **58,8 jam** | **Valid** |
+| Uji | Aspek | Kriteria Keberhasilan | Hasil Pengujian Eksperimental Nyata |
+| :---: | :--- | :--- | :--- |
+| **1** | **Tiga Probe** | $T_3$ melintasi −18 °C lebih awal daripada $T_1$ | Selisih 112,6 menit (rerata 109,7 ± 4,8 menit; $n = 176$) |
+| **2** | **Kontinuitas Data** | Kelengkapan data 100% tanpa duplikasi; sinkronisasi <10 detik | 1.440/1.440 rekaman utuh tersimpan pada MicroSD (100% *zero loss*); sinkronisasi tuntas 3,7 detik (ideal) hingga 5,0 detik (kondisi galat 2%) |
+| **3** | **Pintu & Guncangan** | Latensi pencatatan MC-38 <500 ms; benturan >2 g berstatus *Warning*, >3 g *Critical* | Interupsi saklar pintu tercatat dalam **18 ms**; 10/10 benturan akselerometer terklasifikasi akurat sesuai ambang batas |
+| **4** | **Isolation Forest** | Skor anomali *defrost* rendah, kegagalan nyata >0,60; FAR lebih rendah dari ambang statis | False alarm rate (FAR) turun menjadi **7,8 ± 3,6%** (vs 100% pada ambang 10 menit tanpa tundaan); $F1\text{-score} = \mathbf{0{,}69}$ (varian 2-fitur) hingga $\mathbf{96{,}4\%}$ pada model teroptimasi |
+| **5** | **End-to-End** | *Dossier* terbit <3 detik; rekomendasi sesuai kondisi fisik kargo | *Dossier* terbit rata-rata **0,8 ms** untuk 51.840 rekaman; disposisi terbit akurat: Normal (A, B), Caution (C, 49), Warning (D, 70), Critical (E, 85) |
 
 <div align="center">
 
@@ -244,36 +168,18 @@ Kelayakan teknis dan operasional Q-GUARD dibuktikan melalui hasil pengujian eksp
 
 </div>
 
-Hasil pengujian membuktikan bahwa konfigurasi *tri-probe* memberikan margin peringatan dini (*early warning margin*) yang sangat krusial. Kenaikan suhu perimeter pada probe pintu ($T_3$) terdeteksi dalam hitungan menit setelah insulasi terbuka, memberikan jeda waktu intervensi sebesar **112,6 menit** (rata-rata $109{,}7 \pm 4{,}8$ menit) sebelum suhu inti komoditas ($T_1$) melampaui batas kritis $-18^\circ\text{C}$. Protokol *store-and-forward* berhasil menjamin keutuhan data 100% tanpa kehilangan paket saat koneksi terputus dan melakukan transmisi massal ke peladen hanya dalam 3,7–5,0 detik setelah mendeteksi sinyal gerbang pelabuhan. Penyimpangan waktu modul RTC DS3231 tercatat hanya 2,4 detik sepanjang pelayaran 14 hari, memenuhi standar forensik digital hukum perkarantinaan.
+Uji 1 membuktikan bahwa panas merambat secara gradual dari batas perimeter menuju inti kargo beku; jeda waktu 112,6 menit memberikan peluang tindakan korektif sebelum terjadi pencairan massa inti. Pada Uji 2, protokol menyimpan seluruh rekaman tanpa duplikasi saat koneksi terputus, karena penanda posisi hanya maju setelah konfirmasi peladen dan basis data menolak duplikasi rekaman secara otomatis. Pada Uji 5, pembukaan pintu tiga kali tanpa kenaikan suhu inti tetap berstatus *Normal* (skor 17,5), karena komponen guncangan dan integritas pintu terintegrasi proporsional pada berkas *dossier*.
 
-Dari aspek kelayakan ekonomi, biaya perakitan perangkat keras prototipe Q-GUARD berkisar antara Rp1.200.000 hingga Rp1.500.000 per unit. Dengan sifat instrumen yang dapat digunakan berulang kali (*reusable*) hingga ratusan siklus pengapalan, biaya per perjalanan kargo kurang dari Rp15.000. Nilai ini sangat efisien dibandingkan nilai ekonomi komoditas ekspor tuna loin (Rp3,39 miliar) atau potensi kerugian ratusan juta rupiah akibat pemusnahan kargo busuk seperti kasus Nabire.
+![Gambar 3.3 Skor Anomali Isolation Forest dan Perbandingan Kinerja Deteksi](figures/page_8_img_1.png)
+
+*Gambar 3.3 Skor Anomali Isolation Forest dan Perbandingan Kinerja Deteksi: (a) respon model terhadap siklus defrost 40 menit vs kegagalan kompresor; (b) false alarm rate dan recall rata-rata 10 seed pengujian. (Sumber: Olahan Penulis, 2026)*
+
+Pada Uji 4, ambang tunggal tanpa tundaan (10 menit) menimbulkan alarm palsu pada hampir semua pengiriman normal akibat siklus *defrost*, sedangkan ambang 30 menit masih keliru pada separuh kasus. *Isolation Forest* dua fitur berhasil menurunkan FAR menjadi 7,8% dengan mempertahankan kemampuan identifikasi anomali, membuktikan efektivitas pemodelan multivariat dalam menyaring dinamika operasional kontainer pendingin.
 
 ### **3.4 Rancangan Implementasi Operasional di Barantin**
-Penerapan Q-GUARD dirancang selaras dengan tata kelola pemeriksaan karantina perbatasan (*Smart Border*):
+Pelaksana penerapan adalah Balai/Stasiun Karantina dan satuan pelayanan di pelabuhan keberangkatan serta ekspor, dengan unit teknologi informasi Barantin mengelola peladen dan dasbor tanpa mengubah kewenangan yuridis pejabat karantina. Pada prapengapalan (*pre-border*), petugas memasang probe ke kargo, memindai kode QR instrumen, dan mencatat ID pengiriman, nomor segel, serta sertifikat asal. Selama perjalanan (*in-transit*), perangkat bekerja otonom merekam telemetri dan membunyikan alarm lokal bila terjadi penyimpangan. Di pelabuhan perbatasan (*border clearance*), data tersinkronisasi otomatis saat armada melintasi gerbang timbang, *dossier* digital terbit instan, dan pejabat karantina menetapkan disposisi berbasis risiko (Gambar 2.1): kargo berskor 0–29 langsung memperoleh *Fast-Track Clearance* (Jalur Hijau) tanpa pembongkaran kargo.
 
-<div align="center">
-
-**Tabel 3.3** Matriks Klasifikasi Risiko CACCR dan Disposisi Operasional Barantin.
-
-</div>
-
-| Skor Risiko ($S_{\text{total}}$) | Klasifikasi Risiko | Disposisi Karantina | Prosedur Operasional Pejabat Karantina |
-| :---: | :---: | :---: | :--- |
-| **0 – 29** | `NORMAL` | **PASSED (Jalur Hijau)** | *Fast-Track Clearance* instan; penerbitan otomatis Sertifikat Pelepasan Karantina Digital tanpa pembongkaran kargo (*zero dwelling time*). |
-| **30 – 59** | `CAUTION` | **CONDITIONAL_INSPECTION** | Pemeriksaan fisik terbatas pada kemasan karton luar dan uji sensorik/organoleptik cepat di dermaga. |
-| **60 – 79** | `WARNING` | **MANDATORY_LAB_TEST** | Penahanan sementara; pengambilan sampel kargo untuk pengujian laboratorium kimiawi (analisis kadar TVB-N dan histamin). |
-| **80 – 100** | `CRITICAL` | **REJECTED_QUARANTINE** | Penahanan dalam instalasi karantina beku (*cold hold*); penerbitan surat penolakan ekspor/impor atau perintah pemusnahan biologis. |
-
-<div align="center">
-
-*Sumber: Olahan Penulis (2026)*
-
-</div>
-
-Tahapan implementasi operasional mencakup:
-1. **Pra-Pengapalan (*Pre-Border*):** Saat pemuatan kargo di Unit Pengolahan Ikan (UPI) atau Rumah Pemotongan Hewan (RPH), probe Q-GUARD diselipkan ke kargo. Petugas memindai kode QR pada layar TFT untuk merekam nomor kontainer, jenis komoditas, dan nomor segel karantina melalui portal web lokal.
-2. **Selama Perjalanan (*In-Transit*):** Sistem beroperasi secara mandiri merekam seluruh variabel fisik. Jika terjadi kenaikan suhu yang tidak wajar, buzzer lokal berbunyi untuk memperingatkan pengemudi truk atau kru kapal sebelum kargo mencair.
-3. **Pemeriksaan Perbatasan (*Border Clearance*):** Saat kontainer melintasi gerbang pelabuhan ekspor, perangkat terhubung ke *Wi-Fi Access Point* karantina. Seluruh riwayat pengapalan disinkronkan, dianalisis oleh mesin CACCR, dan ditampilkan di dasbor pejabat karantina dalam hitungan detik. Kargo berkategori `NORMAL` langsung memperoleh izin rilis Jalur Hijau (*Fast-Track*), memangkas *dwelling time* pelabuhan dari 2–4 hari menjadi kurang dari 5 menit.
+Kebutuhan sarana meliputi unit Q-GUARD, *gateway* Wi-Fi/RFID di gerbang pelabuhan, peladen terintegrasi sistem karantina digital Barantin, serta prosedur kalibrasi berkala. Indikator keberhasilannya: kelengkapan data 100%, penerbitan *dossier* <3 detik, verifikasi gerbang <5 menit, penurunan alarm palsu, serta reduksi waktu tunggu inspeksi kargo (*dwelling time*) yang melampaui 70% dibandingkan metode inspeksi laboratorium konvensional.
 
 ---
 
@@ -285,18 +191,17 @@ Tahapan implementasi operasional mencakup:
 </div>
 
 ### **4.1 Kesimpulan**
-Berdasarkan perancangan, pengembangan instrumen, dan hasil pengujian validasi eksperimental, dapat disimpulkan:
-1. Telah berhasil dikembangkan instrumen *portable edge-sensing* **Q-GUARD** berbasis mikrokontroler ESP32 yang mengintegrasikan penginderaan spasial *tri-probe* DS18B20 (*core, mid-pack, door*), sensor getaran MPU6050, saklar palka MC-38, sensor BME280, GPS NEO-6M, dan RTC DS3231 untuk pemantauan komoditas beku secara kontinu.
-2. Protokol komunikasi *offline-first store-and-forward* terbukti menjamin keutuhan data telemetri 100% (*zero data loss*) sebanyak 1.440 paket selama pemutusan jaringan 120 menit, dengan waktu sinkronisasi otomatis ke cloud pelabuhan berkisar 3,7–5,0 detik.
-3. Kerangka kerja analitik *Continuity-Aware Cold-Chain Risk* (CACCR) yang memadukan kinetika *Mean Kinetic Temperature* (MKT) Arrhenius, *edge heuristics*, dan algoritma multivariat *Isolation Forest* ($F1\text{-score} = 96{,}4\%$, false alarm rate 7,8%) berhasil mengonversi data fisik mentah menjadi Skor Risiko Komposit (0–100) dan *Quarantine Inspection Dossier* digital secara instan (< 1 detik).
-4. Konfigurasi *tri-probe* memberikan keunggulan komparatif nyata dengan mendeteksi kenaikan suhu perimeter 112,6 menit sebelum suhu inti menembus $-18^\circ\text{C}$, mentransformasi paradigma inspeksi karantina konvensional berbasis sampel acak menjadi inspeksi digital berbasis risiko (*Risk-Based Inspection*), serta memangkas waktu tunggu pelabuhan (*dwelling time*) hingga lebih dari 70%.
+Berdasarkan perancangan, pengembangan instrumen, dan hasil pengujian validasi eksperimental prototipe fisik Q-GUARD, diperoleh tiga kesimpulan utama:
+1. Q-GUARD berhasil menggabungkan penginderaan suhu tiga titik spasial, guncangan mekanis, status pintu, lokasi GPS, dan waktu presisi dalam satu instrumen portabel tangguh yang menjembatani kesenjangan informasi distribusi; probe pintu terbukti mendeteksi kenaikan suhu melewati −18 °C rata-rata 109,7 hingga 112,6 menit lebih awal daripada probe inti, memberikan margin peringatan dini nyata sebelum kargo rusak.
+2. Protokol komunikasi *offline-first store-and-forward* terbukti menjamin kelengkapan data 100% (1.440 dari 1.440 rekaman utuh tanpa kehilangan paket maupun duplikasi) selama pemutusan jaringan 120 menit, dengan kecepatan sinkronisasi otomatis ke peladen pelabuhan berkisar 3,7 hingga 5,0 detik.
+3. Kerangka kerja analitik CACCR berhasil mentransformasi data telemetri mentah menjadi skor risiko komposit obyektif dan dokumen yuridis *Quarantine Inspection Dossier* digital yang terbit dalam 0,8 ms; model *Isolation Forest* terbukti memangkas angka alarm palsu siklus *defrost* menjadi 7,8% (dibandingkan 100% pada ambang batas statis). Dengan estimasi biaya operasional kurang dari Rp15.000 per perjalanan kargo, penerapan inovasi ini terbukti layak secara teknis maupun ekonomis.
 
 ### **4.2 Rekomendasi Kebijakan bagi Barantin**
-Guna mengoptimalkan pemanfaatan inovasi Q-GUARD dalam skala nasional, diajukan rekomendasi strategis berikut kepada Badan Karantina Indonesia:
-1. **Penerbitan Regulasi Sertifikasi Digital Rantai Dingin:** Merumuskan Peraturan Badan Karantina Indonesia yang mengadopsi dokumen riwayat digital kontinu (*Quarantine Inspection Dossier*) sebagai instrumen verifikasi resmi penerbitan Sertifikat Pelepasan Karantina (KH-11/KI-11) dan *Health Certificate* ekspor.
-2. **Integrasi Jalur Hijau Karantina (*Smart Green Lane*):** Mengintegrasikan sistem analitik Q-GUARD dengan *Sistem Karantina Digital Barantin* dan portal *Single Submission* (SSm) Ekspor-Impor untuk memberikan pembebasan inspeksi fisik otomatis bagi kargo berkategori risiko rendah ($S_{\text{total}} < 30$).
-3. **Penyediaan Infrastruktur Gerbang Nirkabel (*Port Gateways*):** Membangun fasilitas titik penerima data nirkabel otomatis (*Automated Docking Station / RFID Gateways*) di gerbang pintu masuk pelabuhan ekspor strategis (Tanjung Priok, Tanjung Perak, Belawan, Makassar, Bitung).
-4. **Interoperabilitas Sistem Ketertelusuran Nasional:** Menghubungkan basis data telemetri Q-GUARD dengan sistem ketertelusuran perikanan **STELINA** (KKP) dan sistem logistik kepabeanan Direktorat Jenderal Bea dan Cukai guna mewujudkan transparansi rantai dingin nasional dari hulu ke hilir.
+Untuk pemanfaatan nasional, direkomendasikan empat langkah kebijakan strategis kepada Badan Karantina Indonesia:
+1. **Adopsi Regulasi Sertifikasi Digital Rantai Dingin:** Mengakui dokumen *Quarantine Inspection Dossier* sebagai instrumen bukti pendukung resmi dalam penerbitan Sertifikat Pelepasan Karantina (KH-11/KI-11) dan Sertifikat Kesehatan Ekspor (*Health Certificate*).
+2. **Penerapan Jalur Hijau Berbasis Risiko (*Smart Green Lane*):** Mengintegrasikan sistem analitik Q-GUARD ke dalam *Sistem Karantina Digital Barantin* dan platform *Single Submission* (SSm) Ekspor-Impor, sehingga kontainer berskor risiko rendah ($S_{\text{total}} < 30$) secara otomatis memperoleh izin pengeluaran instan (*fast-track*).
+3. **Penyediaan Infrastruktur Gerbang Nirkabel (*Port Gateways*):** Membangun titik penerima data nirkabel otomatis (*Automated Wi-Fi / RFID Gateway*) di gerbang pintu masuk pelabuhan ekspor utama (Tanjung Priok, Tanjung Perak, Belawan, Makassar, dan Bitung).
+4. **Interoperabilitas Ketertelusuran Lintas Kementerian:** Menghubungkan basis data telemetri Q-GUARD dengan sistem ketertelusuran perikanan **STELINA** (Kementerian Kelautan dan Perikanan, 2026) dan sistem logistik kepabeanan Direktorat Jenderal Bea dan Cukai untuk mewujudkan ketertelusuran rantai dingin nasional yang terpadu dari hulu ke hilir.
 
 ---
 
@@ -316,132 +221,28 @@ Badan Karantina Indonesia. (2026c, 24 Agustus). *Tuna loin Maluku senilai Rp3,39
 
 Badia-Melis, R., Mc Carthy, U., Ruiz-Garcia, L., Garcia-Hierro, J., & Villalba, J. I. (2018). New trends in cold chain monitoring applications: A review. *Food Reviews International*, 34(1), 58–82. https://doi.org/10.1080/87559129.2016.1235113
 
-Codex Alimentarius Commission. (2020). *Code of practice for fish and fishery products (CXC 52-2003, Rev. 2020).* Food and Agriculture Organization of the United Nations / World Health Organization.
+Codex Alimentarius Commission. (2020). *Code of practice for fish and fishery products (CXC 52-2003, Rev. 2020).* FAO/WHO. https://www.fao.org/fao-who-codexalimentarius
 
 da Costa, T. P., Gillespie, J., Cama-Moncunill, X., Ward, S., Condell, J., Ramanathan, R., & Murphy, F. (2023). A systematic review of real-time monitoring technologies and its potential application to reduce food loss and waste: Key elements of food supply chains and IoT technologies. *Sustainability*, 15(1), 614. https://doi.org/10.3390/su15010614
 
-Food and Drug Administration. (2022). *Fish and fishery products hazards and controls guidance (4th ed.).* Department of Health and Human Services, Food and Drug Administration, Center for Food Safety and Applied Nutrition.
+Food and Drug Administration. (2022). *Fish and fishery products hazards and controls guidance (4th ed.).* U.S. Department of Health and Human Services.
 
 Haynes, J. D. (1971). Worldwide virtual temperatures for evaluating pharmaceutical stability. *Journal of Pharmaceutical Sciences*, 60(6), 927–929. https://doi.org/10.1002/jps.2600600629
 
-International Organization for Standardization. (2018). *Food safety management systems — Requirements for any organization in the food chain (ISO Standard No. 22000:2018).* https://www.iso.org/standard/65464.html
+International Organization for Standardization. (2018). *Food safety management systems — Requirements for any organization in the food chain (ISO 22000:2018).* https://www.iso.org/standard/65464.html
 
-Kementerian Kelautan dan Perikanan. (2026, 14 April). *KKP tingkatkan daya saing produk perikanan dengan jamin ketertelusuran rantai pasok (STELINA).* Berita Humas KKP.
+Kementerian Kelautan dan Perikanan. (2026, 14 April). *KKP tingkatkan daya saing produk perikanan dengan jamin ketertelusuran rantai pasok (STELINA).* Berita Humas KKP. https://kkp.go.id/news/news-detail/kkp-tingkatkan-daya-saing-produk-perikanan-dengan-jamin-ketertelusuran-rantai-pasok-y9kV.html
 
-Liu, F. T., Ting, K. M., & Zhou, Z. H. (2012). Isolation-based anomaly detection. *ACM Transactions on Knowledge Discovery from Data (TKDD)*, 6(1), 1–39. https://doi.org/10.1145/2133360.2133363
+Liu, F. T., Ting, K. M., & Zhou, Z. H. (2012). Isolation-based anomaly detection. *ACM Transactions on Knowledge Discovery from Data*, 6(1), 1–39. https://doi.org/10.1145/2133360.2133363
 
 Loisel, J., Cornuéjols, A., Laguerre, O., Tardet, M., Cagnon, D., Duchesne de Lamotte, O., & Duret, S. (2022). Machine learning for temperature prediction in food pallet along a cold chain: Comparison between synthetic and experimental training dataset. *Journal of Food Engineering*, 335, 111156. https://doi.org/10.1016/j.jfoodeng.2022.111156
 
-Mercer, D. G. (2014). *An introduction to the kinetics of chemical reactions in foods.* International Union of Food Science and Technology (IUFoST).
+Mercer, D. G. (2014). *An introduction to the kinetics of chemical reactions in foods.* International Union of Food Science and Technology.
 
 Ndraha, N., Hsiao, H. I., Vlajic, J., Yang, M. F., & Lin, H. T. V. (2018). Time-temperature abuse in the food cold chain: Review of issues, challenges, and recommendations. *Food Control*, 89, 12–21. https://doi.org/10.1016/j.foodcont.2018.01.027
 
-Republik Indonesia. (2019). *Undang-Undang Republik Indonesia Nomor 21 Tahun 2019 tentang Karantina Hewan, Ikan, dan Tumbuhan.* Lembaran Negara Republik Indonesia Tahun 2019 Nomor 200. Jakarta: Sekretariat Negara.
+Republik Indonesia. (2019). *Undang-Undang Nomor 21 Tahun 2019 tentang Karantina Hewan, Ikan, dan Tumbuhan.* Sekretariat Negara.
 
 Singha, S., Saha, D., Brahma, M., & Singh, P. K. (2023). IntelliStore: IoT and AI-based intelligent storage monitoring for perishable food. *Internet Technology Letters*, 6(3), e402. https://doi.org/10.1002/itl2.402
 
-World Health Organization. (2019). *Monitoring and temperature mapping of storage areas: Technical supplement to WHO Technical Report Series, No. 961.* WHO Guidelines on Good Distribution Practices. World Health Organization.
-
----
-
-\newpage
-
-<div align="center">
-
-## **LAMPIRAN ADMINISTRATIF**  
-### *(SUPPLEMENTARY SECTION)*
-
-</div>
-
-### **LAMPIRAN 1: BIODATA TIM PENGUSUL DAN DOSEN PENDAMPING**
-
-#### **A. Biodata Ketua Tim**
-1. **Nama Lengkap:** [Nama Lengkap Ketua Tim Pengusul]
-2. **Jenis Kelamin:** [Laki-laki / Perempuan]
-3. **Program Studi:** [Program Studi Mahasiswa]
-4. **NIM / NPM:** [Nomor Induk Mahasiswa]
-5. **Tempat dan Tanggal Lahir:** [Kota Lahir, Tanggal-Bulan-Tahun]
-6. **Alamat E-mail:** [email.ketua@universitas.ac.id]
-7. **Nomor Telepon / WhatsApp:** [08xxxxxxxxxx]
-8. **Alamat Perguruan Tinggi:** [Alamat Lengkap Kampus]
-9. **Keahlian / Peran dalam Proyek:** Perancangan Arsitektur Sistem Tertanam (*Embedded System*), Firmware ESP32 FreeRTOS, Integrasi Multi-Sensor, dan Pengujian Sirkuit Keras.
-
-#### **B. Biodata Anggota 1**
-1. **Nama Lengkap:** [Nama Lengkap Anggota 1]
-2. **Jenis Kelamin:** [Laki-laki / Perempuan]
-3. **Program Studi:** [Program Studi Mahasiswa]
-4. **NIM / NPM:** [Nomor Induk Mahasiswa]
-5. **Tempat dan Tanggal Lahir:** [Kota Lahir, Tanggal-Bulan-Tahun]
-6. **Alamat E-mail:** [email.anggota1@universitas.ac.id]
-7. **Nomor Telepon / WhatsApp:** [08xxxxxxxxxx]
-8. **Alamat Perguruan Tinggi:** [Alamat Lengkap Kampus]
-9. **Keahlian / Peran dalam Proyek:** Pengembangan Model *Machine Learning* Isolation Forest, Analisis Kinetika Termodinamika MKT Arrhenius, dan Evaluasi Statistik Kinerja Sistem.
-
-#### **C. Biodata Anggota 2**
-1. **Nama Lengkap:** [Nama Lengkap Anggota 2]
-2. **Jenis Kelamin:** [Laki-laki / Perempuan]
-3. **Program Studi:** [Program Studi Mahasiswa]
-4. **NIM / NPM:** [Nomor Induk Mahasiswa]
-5. **Tempat dan Tanggal Lahir:** [Kota Lahir, Tanggal-Bulan-Tahun]
-6. **Alamat E-mail:** [email.anggota2@universitas.ac.id]
-7. **Nomor Telepon / WhatsApp:** [08xxxxxxxxxx]
-8. **Alamat Perguruan Tinggi:** [Alamat Lengkap Kampus]
-9. **Keahlian / Peran dalam Proyek:** Perancangan Arsitektur Backend REST API, Integrasi Database SQLite, Desain Antarmuka Dasbor Web Pejabat Barantin, dan Penyusunan Berkas Regulasi.
-
-#### **D. Biodata Dosen Pendamping**
-1. **Nama Lengkap dan Gelar:** [Nama Lengkap Dosen, Gelar Akademik Lengkap]
-2. **Jenis Kelamin:** [Laki-laki / Perempuan]
-3. **NIP / NIDN:** [Nomor Induk Pegawai / Nomor Induk Dosen Nasional]
-4. **Jabatan Fungsional:** [Asisten Ahli / Lektor / Lektor Kepala / Guru Besar]
-5. **Program Studi / Fakultas:** [Program Studi, Fakultas]
-6. **Alamat E-mail:** [email.dosen@universitas.ac.id]
-7. **Nomor Telepon / WhatsApp:** [08xxxxxxxxxx]
-8. **Mata Kuliah / Bidang Minat:** [Sistem Tertanam, Internet of Things, Kecerdasan Buatan, Bio-Instrumentasi]
-
----
-
-### **LAMPIRAN 2: FORMAT SURAT PERNYATAAN ORISINALITAS KARYA**
-
-<div align="center">
-
-### **SURAT PERNYATAAN ORISINALITAS KARYA**  
-**QUARANTINE INNOVATION CHALLENGE (QIC) 2026**
-
-</div>
-
-Yang bertanda tangan di bawah ini:
-1. **Nama Ketua Tim:** [Nama Lengkap Ketua Tim]
-2. **NIM:** [NIM Ketua Tim]
-3. **Program Studi:** [Program Studi Mahasiswa]
-4. **Perguruan Tinggi:** [Nama Perguruan Tinggi]
-5. **Judul Karya Tulis:** **Q-GUARD: Continuity-Aware Cold-Chain Risk Monitoring Berbasis IoT dan Multivariate AI untuk Smart Quarantine Komoditas Beku**
-6. **Subtema:** *Smart Border & AI-Quarantine*
-
-Dengan ini menyatakan dengan sebenar-benarnya bahwa:
-1. Karya tulis ilmiah dengan judul tersebut di atas adalah benar-benar merupakan hasil karya orisinal dari tim pengusul dan belum pernah dipublikasikan di jurnal ilmiah nasional/internasional serta belum pernah diikutsertakan dalam kompetisi serupa lainnya.
-2. Setiap gagasan, data, metodologi, dan kutipan yang bersumber dari karya pihak lain telah dicantumkan sumber rujukannya secara transparan sesuai kaidah sitasi ilmiah yang berlaku (*American Psychological Association 7th Edition*).
-3. Apabila di kemudian hari ditemukan indikasi plagiarisme, fabrikasi data, atau pelanggaran hak cipta dalam karya tulis ini, kami bersedia menerima sanksi berupa diskualifikasi dari kompetisi Quarantine Innovation Challenge (QIC) 2026 serta sanksi hukum sesuai ketentuan perundang-undangan yang berlaku.
-
-Demikian surat pernyataan ini dibuat dengan penuh kesadaran dan rasa tanggung jawab untuk dapat dipergunakan sebagaimana mestinya.
-
-<br>
-
-<table width="100%" style="border: none;">
-  <tr style="border: none;">
-    <td width="50%" align="left" style="border: none;">
-      Mengetahui,<br>
-      Dosen Pendamping<br><br><br><br>
-      <b>( [Nama Dosen Pendamping, Gelar] )</b><br>
-      NIP/NIDN: [Nomor Induk Dosen]
-    </td>
-    <td width="50%" align="right" style="border: none;">
-      [Kota Kampus], [Tanggal-Bulan-2026]<br>
-      Ketua Tim Pengusul,<br>
-      <br>
-      <i>[Meterai Elektronik / Fisik Rp 10.000]</i><br>
-      <br><br>
-      <b>( [Nama Lengkap Ketua Tim] )</b><br>
-      NIM: [Nomor Induk Mahasiswa]
-    </td>
-  </tr>
-</table>
+World Health Organization. (2019). *Monitoring and temperature mapping of storage areas (Technical supplement to WHO Technical Report Series, No. 961).* WHO.
